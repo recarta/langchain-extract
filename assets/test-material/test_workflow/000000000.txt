@@ -1,0 +1,361 @@
+Exhibit 10.1
+SECOND AMENDMENT
+TO
+SECOND AMENDED AND RESTATED CREDIT AGREEMENT
+     THIS SECOND AMENDMENT TO SECOND AMENDED AND RESTATED CREDIT AGREEMENT (this
+“Amendment”), dated as of April 20, 2011 is among SESI, L.L.C., as Borrower,
+SUPERIOR ENERGY SERVICES, INC., as Parent, JPMORGAN CHASE BANK, N.A., as Agent
+(the “Agent”), and the Lenders party hereto, who agree as follows:
+RECITALS
+     A. The Borrower, Parent, Agent and certain of the Lenders have heretofore
+executed a Second Amended and Restated Credit Agreement dated as of May 29, 2009
+(the “Credit Agreement”).
+     B. The Borrower proposes to issue senior unsecured notes due 2019 up to the
+aggregate principal amount of $500,000,000 (the “2011 Senior Notes”), with the
+intention of redeeming in full the Borrower’s existing 1.5% Senior Exchangeable
+Notes due 2026 (the “Senior Exchangeable Notes”) when the latter become subject
+to redemption not later than December 30, 2011. The Borrower proposes to use a
+portion of the proceeds of the 2011 Senior Notes up to an aggregate of
+$400,000,000 initially to repay in full the outstanding principal balance of the
+Revolving Loan, and to retain the balance of the proceeds in cash or cash
+equivalents until the Senior Exchangeable Notes are redeemable, at which time
+the Borrower proposes to use such cash proceeds, other cash available to the
+Borrower and/or advances available on the Revolving Loan to redeem the Senior
+Exchangeable Notes in full on or before December 30, 2011. The Borrower proposes
+to use the proceeds of the 2011 Senior Notes in excess of $400,000,000 for
+general company purposes.
+     C. In order to consummate the foregoing transaction, the Borrower has
+requested modifications of the Credit Agreement in the following respects:
+(i) to permit (as additional Funded Indebtedness) the 2011 Senior Notes; and
+(ii) for the period from the issuance of the 2011 Senior Notes to and including
+December 30, 2011, to exclude from Funded Indebtedness the cash proceeds of the
+2011 Senior Notes retained in cash or cash equivalents (after repayment of the
+Revolving Loan) for the redemption of the Senior Exchangeable Notes. Funded
+Indebtedness shall not be reduced by the amount of any cash proceeds of the 2011
+Senior Notes in excess of $400,000,000. The Agent and Lenders are willing to
+accept the Borrower’s request on the terms and conditions set forth below.
+     D. Capitalized terms used herein, and not otherwise defined herein, shall
+have the meanings defined in the Credit Agreement.
+     NOW, THEREFORE, in consideration of the mutual covenants and undertakings,
+the parties hereby agree as follows:
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+ARTICLE 1
+AMENDMENTS TO THE CREDIT AGREEMENT
+     1.1 Section 6.11(a) (vi) (Funded Indebtedness; Rate Management Obligations)
+of the Credit Agreement is hereby amended to read as follows:
+
+  (vi)   Funded Indebtedness represented by (x) the 6⅞% Senior Notes up to the
+aggregate principal amount of $300,000,000, issued pursuant to the Indenture
+relating thereto dated as of May 22, 2006, among the Borrower, the Parent, the
+respective Subsidiaries of the Parent party thereto and The Bank of New York
+Trust Company, N.A., as trustee, (y) the 1.5% Senior Exchangeable Notes up to
+the aggregate principal amount of $400,000,000 due 2026 issued pursuant to the
+Indenture relating thereto dated as of December 12, 2006, among the Borrower,
+the Parent, the respective Subsidiaries of the Parent party thereto and The Bank
+of New York Trust Company, N.A., as trustee, provided that if the Notes
+described in clause (z) hereof are issued, such 1.5% Senior Exchangeable Notes
+must be redeemed in full on or before December 30, 2011; and (z) the senior
+unsecured notes up to the aggregate principal amount of $500,000,000 due 2019
+(the “2011 Senior Notes”), to be issued pursuant to an Indenture among the
+Borrower, the Parent, their respective Subsidiaries party thereto and The Bank
+of New York Trust Mellon Company, N.A., as trustee, provided that the cash
+proceeds of the 2011 Senior Notes up to an aggregate of $400,000,000 are
+initially used to repay in full the outstanding principal balance of the
+Revolving Loan, and the balance of the proceeds are held in cash or cash
+equivalents until the Senior Exchangeable Notes are redeemable, at which time
+said cash and cash equivalents together with other cash available to the
+Borrower and/or advances available on the Revolving Loan shall be used to redeem
+the Senior Exchangeable Notes in full on or before December 30, 2011; in each
+case, as amended, supplemented, amended and restated or otherwise modified, but
+not increased in aggregate amount, from time to time.
+
+     1.2 During the period from the date of the issuance of the 2011 Senior
+Notes to and including December 30, 2011, “Funded Indebtedness” shall be reduced
+by the cash proceeds of the 2011 Senior Notes (after the initial repayment of
+the Revolving Loan in full) retained in cash or cash equivalents for the
+redemption of the Senior Exchangeable Notes. Funded Indebtedness shall not be
+reduced by the amount of any cash proceeds of the 2011 Notes in excess of
+$400,000,000
+     1.3 Except as specifically amended hereby, all of the remaining terms and
+conditions of the Credit Agreement remain in full force and effect.
+     1.4 Notwithstanding the foregoing, this Amendment shall terminate and be of
+no further force and effect if the Borrower fails to issue the 2011 Notes on or
+prior to June 20, 2011.
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+ARTICLE 2
+CONDITIONS PRECEDENT
+     2.1 This Amendment shall be effective upon the Agent’s receipt of the
+following, in form and substance satisfactory to the Agent:
+     (i) Second Amendment. This Amendment, executed and delivered by the Agent,
+the Parent, the Borrower and the Required Lenders.
+     (ii) Chief Financial Officer Certificate. A certificate signed by the Chief
+Financial Officer of the Parent certifying that (i) no Default or Event of
+Default exists under the Credit Agreement; and (ii) that there has been no
+Material Adverse Effect relating to the Parent, Borrower and Borrower’s
+Subsidiaries occurring since December 31, 2010.
+ARTICLE 3
+MISCELLANEOUS
+     3.1 The Parent and Borrower reaffirm to the Agent and Lenders that the
+representations and warranties contained in Article V of the Credit Agreement
+were true and correct when made, and are repeated at and as of the date hereof
+and are true and correct in all material respects at and as of the date hereof,
+except as such representations and warranties relate to matters that are
+permitted by the Credit Agreement to be true only as of the Closing Date.
+     3.2 This Amendment is a contract, and the replacement Notes will be
+contracts, made under and shall be construed in accordance with and governed by
+the laws of the United States of America and the State of Louisiana.
+     3.3 This Amendment constitutes a Loan Document (as that term is defined in
+the Credit Agreement).
+     3.4 This Amendment does not constitute a novation of the Credit Agreement
+or the Obligations represented by the Credit Agreement, the Notes and the
+Collateral Documents.
+     3.5 This Amendment may be executed in any number of separate counterparts,
+and all of said counterparts taken together shall be deemed to constitute one in
+the same instrument.
+[Signatures on following pages]
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+     IN WITNESS WHEREOF, the Borrower, the Agent and the Lenders have executed
+this Amendment as of the date first above written.
+
+              BORROWER:   SESI, L.L.C.
+ 
+                By:   Superior Energy Services, Inc.         Member Manager
+ 
+           
+ 
+      By:   /s/ Robert S. Taylor
+ 
+           
+ 
+          Name: Robert S. Taylor
+ 
+          Title: Chief Financial Officer
+ 
+            PARENT:   SUPERIOR ENERGY SERVICES, INC.
+ 
+           
+ 
+  By:   /s/ Robert S. Taylor                   Name: Robert S. Taylor        
+Title: Chief Financial Officer
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+          AGENT, CO-LEAD
+ARRANGER AND LENDER: JPMORGAN CHASE BANK, N.A.
+
+
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          CO-LEAD ARRANGER AND LENDER: WELLS FARGO BANK, N.A.
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          CO-DOCUMENTATION AGENT
+AND LENDER: WHITNEY NATIONAL BANK
+
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          CO-DOCUMENTATION AGENT
+AND LENDER: PNC BANK, NATIONAL ASSOCIATION
+
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          CO-DOCUMENTATION AGENT
+AND LENDER: COMERICA BANK, NA
+
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          CO-DOCUMENTATION AGENT
+AND LENDER: BANK OF AMERICA, N.A.
+
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          CO-DOCUMENTATION AGENT
+AND LENDER: BNP PARIBAS
+
+      By:           Name:           Title:                 By:           Name:  
+        Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          LENDER: NATIXIS
+      By:           Name:           Title:                 By:           Name:  
+        Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          LENDER: CAPITAL ONE, NATIONAL
+ASSOCIATION
+      By:           Name:           Title:      
+
+ 
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+ 
+
+
+
+         
+
+          LENDER: HSBC BANK USA, N.A.
+      By:           Name:           Title:        
+
+ 

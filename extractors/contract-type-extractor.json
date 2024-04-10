@@ -1,0 +1,59 @@
+{
+    "name": "Contract Type extractor",
+    "description": "Schema for extracting data from contracts",
+    "schema": {
+        "type": "object",
+        "title": "Contract",
+        "required": [
+          "contractType"
+        ],
+        "Document Name": {
+            "type": "string",
+            "title": "Name",
+            "description": "The name of the contract."
+        },
+        "contractType": {
+            "type": "string",
+            "title": "Contract type",
+            "description": "one of the following: SLA, NDA, amendment, framework contract, contract, other."
+        },
+        "language": {
+            "type": "string",
+            "title": "Contract language",
+            "description": "one of the following: french, german, english, other."
+        },
+        "properties": {
+            "parties": {
+                "type": "array",
+                "title": "Parties",
+                "items": {
+                    "type": "object",
+                    "title": "Party",
+                    "required": [
+                        "name"
+                    ],
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "title": "Name",
+                            "description": "The name of the party and how it's referred to in the contract."
+                        }
+                    },
+                    "minItems" : 2,
+                    "uniqueItems" : true
+                }
+            },
+            "signed_status": {
+                "type": "string",
+                "title": "Signed Status",
+                "description": "The status indicating whether the contract is signed, can be YES or NO."
+            },
+            "Agreement Date": {
+                "type": "string",
+                "title": "Date of Signature",
+                "description": "The date when the contract was signed."
+            }
+        }
+    },
+    "instruction": "Use information about the contract from the given user input."
+}

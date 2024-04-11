@@ -5,7 +5,10 @@
         "type": "object",
         "title": "Contract",
         "required": [
-          "contractType"
+            "contractType",
+            "language",
+            "Document Name",
+            "parties"
         ],
         "Document Name": {
             "type": "string",
@@ -41,7 +44,8 @@
                     },
                     "minItems" : 2,
                     "uniqueItems" : true
-                }
+                },
+                "uniqueItems" : true
             },
             "signed_status": {
                 "type": "string",

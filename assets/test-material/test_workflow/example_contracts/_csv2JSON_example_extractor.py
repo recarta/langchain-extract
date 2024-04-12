@@ -13,7 +13,7 @@ base_filenames= [
     "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT"
 ]
 
-csv_filename_extension = ".pdf"
+csv_filename_extension = ".PDF"
 
 
 for base_filename in base_filenames:
@@ -32,9 +32,9 @@ for base_filename in base_filenames:
                 print("Found the row:", row)
                 values = row
                 break
-            else:
-                # This else block executes if the for loop completes without a break (i.e., no match found)
-                print(f"No file named {csv_filename} found in the CSV.")
+        else:
+            # This else block executes if the for loop completes without a break (i.e., no match found)
+            print(f"No file named {csv_filename} found in the CSV.")
 
     # Modify the keys to match the expected JSON format for the extractor
     modified_keys = [k if k == "Filename" else k.replace("-Answer", "") if k.endswith("-Answer") else k + "-Tip" for k in keys]

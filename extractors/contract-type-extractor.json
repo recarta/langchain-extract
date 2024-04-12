@@ -15,7 +15,7 @@
             "title": "Name",
             "description": "The name of the contract."
         },
-        "contractType": {
+        "contract Type": {
             "type": "string",
             "title": "Contract type",
             "description": "one of the following: SLA, NDA, amendment, framework contract, contract, other."
@@ -47,7 +47,7 @@
                 },
                 "uniqueItems" : true
             },
-            "signed_status": {
+            "signed status": {
                 "type": "string",
                 "title": "Signed Status",
                 "description": "The status indicating whether the contract is signed, can be YES or NO."

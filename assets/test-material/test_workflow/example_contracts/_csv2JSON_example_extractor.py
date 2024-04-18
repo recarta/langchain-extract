@@ -15,10 +15,16 @@ base_filenames= [
 
 csv_filename_extension = ".PDF"
 
+interesting_keys = [
+            "Document Name",
+            "Parties",
+            "Agreement Date",
+            "Language",
+        ]
 
 for base_filename in base_filenames:
     # Initialize an empty dictionary to hold the CSV data
-    data_dict = {}
+    temp_dict = {}
     csv_filename = f"{base_filename}{csv_filename_extension}"
     # Open the CSV file and read the data
     with open(csv_file_path, mode='r', encoding='utf-8') as csvfile:
@@ -29,26 +35,27 @@ for base_filename in base_filenames:
         for row in csv_reader:
             # Check if the first column in the row matches the constructed CSV filename
             if row[0] == csv_filename:
-                print("Found the row:", row)
+                # print("Found the row:", row)
                 values = row
                 break
         else:
             # This else block executes if the for loop completes without a break (i.e., no match found)
-            print(f"No file named {csv_filename} found in the CSV.")
+            print(f"##### No file named {csv_filename} found in the CSV.")
+    # temp_dict holds the CSV data in a dictionary format
+    temp_dict = dict(zip(keys, values))  
 
     # Modify the keys to match the expected JSON format for the extractor
-    modified_keys = [k if k == "Filename" else k.replace("-Answer", "") if k.endswith("-Answer") else k + "-Tip" for k in keys]
-
-    # Map keys to values
-    data_dict = dict(zip(modified_keys, values))
+    data_dict= {}
+    for key in interesting_keys:
+        data_dict[key] = temp_dict[f"{key}-Answer"]
 
     # Convert the dictionary to a JSON string
     json_data = json.dumps(data_dict, indent=4)
 
     # Optionally, print the JSON string to stdout
-    print(json_data)
+    # print(json_data)
 
-    # Optionally, write the JSON string to a file
+    # Write the JSON string to a file
     output_json_file_name = f"{base_filename}_example.json"
     with open(output_json_file_name, 'w', encoding='utf-8') as jsonfile:
         jsonfile.write(json_data)

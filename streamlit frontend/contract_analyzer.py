@@ -14,14 +14,20 @@ test_file = "../assets/test-material/test_workflow/000000000_light.txt"
 #example files to train the extractor
 example_folder = "../assets/test-material/test_workflow/example_contracts/"
 example_files = [ 
-        # "AURASYSTEMSINC_06_16_2010-EX-10.25-STRATEGIC ALLIANCE AGREEMENT",
-        # "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT",
+        "AURASYSTEMSINC_06_16_2010-EX-10.25-STRATEGIC ALLIANCE AGREEMENT",
+        "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT",
         "LIMEENERGYCO_09_09_1999-EX-10-DISTRIBUTOR AGREEMENT",
         "SPIENERGYCO,LTD_03_09_2011-EX-99.5-OPERATIONS AND MAINTENANCE AGREEMENT",
         "SUCAMPOPHARMACEUTICALS,INC_11_04_2015-EX-10.2-STRATEGIC ALLIANCE AGREEMENT",
         "VARIABLESEPARATEACCOUNT_04_30_2014-EX-13.C-UNCONDITIONAL CAPITAL MAINTENANCE AGREEMENT"
     ]
 
+empty_data_slice = {
+            "Document Name" : "Not Found",
+            "Parties" : "Not Found",
+            "Language": "Not Found",
+            "Agreement Date": "Not Found"
+        }
 
 def train_extractor(extractorUUID):
     responses = []
@@ -73,28 +79,27 @@ def extract_file(filepath):
         print(response_json)
         data =response_json["data"]
     else :
-        data = [{
-            "name" : "Contract Name: Not Found",
-            "parties" : ["Not Found"],
-        }]
+        data = [empty_data_slice]
     return data
 
 def display_file_data (filepath):
      # Process the file
     data = extract_file(filepath)
 
-    # for slice in data:
-    slice = data[0]
-    name = slice.get("name", "")    
-    # Display the extracted data
-    if name == "":
-        name = st.text_input('Name', 'The name is missing. Please enter it manually.')
-    else:
-        st.write(name)
-    st.write("Parties:")
-    for party in slice["parties"]:
-        st.write(party)
+    slice = data[0] #for long documents, the data is sliced in multiple parts. At first, I take the first slice
     
+    for key in empty_data_slice.keys():
+        value = slice.get(key, "")    #to prevent an Exception if the key is not found
+        if value == "":   #if the key is not found, the value is set to "Not Found"
+            value = st.text_input(key, f'The {key} is missing. Please enter it manually.')
+        else:
+            st.write(f"{key}:")
+            st.write(value)    
+
+    for key in set(slice.keys()) - set(empty_data_slice.keys()): #display the other keys in any order
+        st.write(f"{key}:")
+        st.write(slice[key])
+
 
 # Streamlit UI components
 st.title('Contract Analyzer')

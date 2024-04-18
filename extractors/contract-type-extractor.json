@@ -5,58 +5,35 @@
         "type": "object",
         "title": "Contract",
         "required": [
-            "contractType",
-            "language",
+            "Language",
             "Document Name",
-            "parties"
+            "Parties",
+            "Agreement Date"
         ],
         "Document Name": {
             "type": "string",
             "title": "Name",
             "description": "The name of the contract."
         },
-        "contract Type": {
+        "Contract Type": {
             "type": "string",
             "title": "Contract type",
             "description": "one of the following: SLA, NDA, amendment, framework contract, contract, other."
         },
-        "language": {
+        "Language": {
             "type": "string",
             "title": "Contract language",
             "description": "one of the following: french, german, english, other."
         },
-        "properties": {
-            "parties": {
-                "type": "array",
-                "title": "Parties",
-                "items": {
-                    "type": "object",
-                    "title": "Party",
-                    "required": [
-                        "name"
-                    ],
-                    "properties": {
-                        "name": {
-                            "type": "string",
-                            "title": "Name",
-                            "description": "The name of the party and how it's referred to in the contract."
-                        }
-                    },
-                    "minItems" : 2,
-                    "uniqueItems" : true
-                },
-                "uniqueItems" : true
-            },
-            "signed status": {
-                "type": "string",
-                "title": "Signed Status",
-                "description": "The status indicating whether the contract is signed, can be YES or NO."
-            },
-            "Agreement Date": {
-                "type": "string",
-                "title": "Date of Signature",
-                "description": "The date when the contract was signed."
-            }
+        "Agreement Date": {
+            "type": "string",
+            "title": "Date of Signature",
+            "description": "The date when the contract was signed."
+        },
+        "Parties": {
+            "type": "string",
+            "title": "The name of the parties and how it's referred to in the contract.",
+            "description": "The date when the contract was signed."
         }
     },
     "instruction": "Use information about the contract from the given user input."

@@ -1,5 +1,6 @@
 import csv
 import json
+import pypandoc
 
 # Path to your CSV file
 csv_file_path = '_master_clauses.csv'
@@ -21,6 +22,9 @@ interesting_keys = [
             "Agreement Date",
             "Language",
         ]
+
+# Download Pandoc
+pypandoc.download_pandoc()
 
 for base_filename in base_filenames:
     # Initialize an empty dictionary to hold the CSV data

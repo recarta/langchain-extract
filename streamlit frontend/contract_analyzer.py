@@ -1,6 +1,8 @@
 import streamlit as st
 import requests
 import json
+import os
+import pypandoc
 
 url = "http://localhost:8000"
 USERID = "184D98E4-D2A8-4DE9-9430-D19479B51605" #fixed for testing
@@ -8,11 +10,14 @@ extractors_headers = {"x-key": USERID, "Content-Type": "application/json", "Acce
 extractor_JSON_file = "../extractors/contract-type-extractor.json" #describe the JSON Schema for the extractor
 
 #test file to extract data from
-# there are 2 versions, the *light* one is better for testing 
-test_file = "../assets/test-material/test_workflow/000000000_light.txt" 
+# there are 2 versions of the TXT file, the *light* one is shorter for testing 
+test_TXT_file = "../assets/test-material/test_workflow/000000000.txt" 
+test_DOCX_file = "../assets/test-material/test_workflow/ACCURAYINC_09_01_2010-EX-10.31-DISTRIBUTOR AGREEMENT.docx" 
+test_PDF_file = "../assets/test-material/test_workflow/ALCOSTORESINC_12_14_2005-EX-10.26-AGENCY AGREEMENT.PDF" 
 
 #example files to train the extractor
 example_folder = "../assets/test-material/test_workflow/example_contracts/"
+temp_transformation_folder = f'{example_folder}temp_transformation/'
 example_files = [ 
         "AURASYSTEMSINC_06_16_2010-EX-10.25-STRATEGIC ALLIANCE AGREEMENT",
         "CUROGROUPHOLDINGSCORP_05_04_2020-EX-10.3-SERVICING AGREEMENT",
@@ -65,26 +70,27 @@ def create_extractor():
     else :
         return 0
 
-def extract_file(filepath):
+def extract_file(file_bytes):
     files = {
         'extractor_id': (None, st.session_state['extractor_UUID']),
-        'file': ('filename.txt', open(filepath, 'rb')),
+        'file': file_bytes,
         'mode': (None, 'entire_document')
     }
     extract_headers = {"x-key": USERID,  "Accept": "application/json"}
     response = requests.post(f"{url}/extract", files=files, headers=extract_headers)
-    # print(response)
     if response.status_code == 200:
         response_json = json.loads(response.text)
         print(response_json)
         data =response_json["data"]
     else :
+        print("**** Error in extract_file")
+        print(response)
         data = [empty_data_slice]
     return data
 
-def display_file_data (filepath):
+def display_file_data (file_bytes):
      # Process the file
-    data = extract_file(filepath)
+    data = extract_file(file_bytes)
 
     slice = data[0] #for long documents, the data is sliced in multiple parts. At first, I take the first slice
     
@@ -100,6 +106,16 @@ def display_file_data (filepath):
         st.write(f"{key}:")
         st.write(slice[key])
 
+def extract_DOCX_in_TXT(docx_path):
+    docx_filename = os.path.basename(docx_path)
+    print("docx_filename = ", docx_filename)
+    txt_filename = docx_filename.replace(".docx", ".txt")
+    txt_path = f'{example_folder}{txt_filename}'
+    output = pypandoc.convert_file(docx_path, 'plain', outputfile=txt_path)
+    if output == 0:
+        print("Error in extract_DOCX_in_TXT")
+        return 0
+    return txt_path
 
 # Streamlit UI components
 st.title('Contract Analyzer')
@@ -108,12 +124,28 @@ if st.button('load extractor'):
 if 'extractor_UUID' in st.session_state:
     st.write(st.session_state['extractor_UUID'])
         
-    uploaded_file = st.file_uploader("Choose a contract file", type=['txt'])
+    uploaded_file = st.file_uploader("Choose a contract file", type=['txt','pdf','docx'])
     if uploaded_file is not None:
-        display_file_data(uploaded_file)
+        if uploaded_file.name.endswith('.docx'):
+            temp_docx_path = f'{temp_transformation_folder}{uploaded_file.name}'
+            with open(temp_docx_path, 'wb') as f:
+                f.write(uploaded_file.read())
+            file_bytes = open(extract_DOCX_in_TXT(temp_docx_path), 'rb').read()
+        else:
+            file_bytes = uploaded_file.read()
+        display_file_data(file_bytes)
 
-    if st.button('extract data for test file'):
-       display_file_data(test_file)
+    if st.button('extract data for test TXT file'):
+       file_bytes = open(test_TXT_file, 'rb').read()
+       display_file_data(file_bytes)
+
+    if st.button('extract data for test PDF file'):
+       file_bytes = open(test_PDF_file, 'rb').read()
+       display_file_data(file_bytes)
+    
+    if st.button('extract data for test DOCX file'):
+        file_bytes = open(extract_DOCX_in_TXT(test_DOCX_file), 'rb').read()
+        display_file_data(file_bytes)
 
 else:
     st.write("Extractor not loaded")
